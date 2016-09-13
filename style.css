@@ -1,0 +1,296 @@
+
+
+	/* Landing Page */
+
+	a:hover {
+		color: orange;
+	}
+
+	#index-p {
+		color: white;
+	}
+
+	#index-a {
+		color: #FEE818;
+	}
+	
+	/* Registration Page */
+
+	/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	
+	/*background = gradient + image pattern combo*/
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#112b56+0,2989d8+100,207cca+100,7db9e8+100 */
+	background: #f5f3e1;
+}
+
+body {
+	body: black;
+	font-family: montserrat, arial, verdana;
+}
+
+	#logo {
+		margin-top: 50px;
+		width: 400px;
+		text-align: center;
+		margin: 30px auto 0 auto;
+	}
+/*form styles*/
+#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #ed1c24;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	font-family: sans-serif;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #ed1c24;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: black;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+	#member-category {
+		width: 100%;
+		margin-left: 0;
+		text-align: left;
+	}
+	#member-category li {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+		.member-category-seperator {
+			margin: 0 8px 0 8px;
+			color: #bdc3c7;
+		}
+
+		.member-category-links {
+			font-size: 12px;
+			color: #686868;
+		}
+			.member-category-link-active {
+				border-bottom: 2px solid #ed1c24;
+				color: #ed1c24;
+			}
+
+			.member-category-links:hover {
+				color: #ed1c24;
+			}
+
+
+	.member-category-details-container {
+		width: 100%;
+		
+		margin-bottom: 20px; 
+		text-align: left;
+	}
+		.member-category-heading {
+			width: 100%;
+			text-align: center;
+			font-size: 12px;
+		}
+
+		.member-category-heading-content {
+			display: inline-block;
+
+		}
+		.member-category-heading-title {
+			width: 60%;
+			font-size: 12px;
+			text-align: left;
+		}
+		.member-category-band-elements {
+			display: inline-block;
+		}
+		.member-category-price {
+			width: 100%;
+			font-size: 14px;
+			margin: 0 auto;
+		}
+			.offering-end {
+				margin-top: 20px;
+				padding-top: 10px;
+				width: 90%;
+				margin: 0 auto;
+				font-size: 10px;
+				color: #9B9A9A;
+			}
+			.member-category-price-title {
+				margin-right: 20px;
+				font-size: 13px;
+				margin-left: 8px;
+			}
+			.member-category-price-amount {
+				font-weight: bold;
+				margin-right: 20px;
+			}
+
+			.member-category-box {
+				width: 100%;
+				border: 1px solid #ccc;
+				padding: 10px 0 10px 0;
+				background: #F2F2F2;
+			}
+
+				.member-category-select {
+					font-size: 12px;
+					font-weight: bold;
+					color: #ed1c24;
+				}
+
+
+
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #ed1c24;
+	color: white;
+}
+
+
+
+.member-category-selector {
+				width: 10px;
+				float: left;
+				background: yellow;
+			}
+
+
+#summary-content {
+	margin-top: 20px;
+}
+	.summary-text {
+		text-align: left;
+		font-size: 12px;
+	}
+		.summary-text-bottom {
+			margin-bottom: 10px;
+		}
+
+
+.form-error {
+	color: red;
+	font-size: 12px;
+	text-align: left;
+	display: none;
+	margin-left: 0;
+}
+
+/* ================ FOR DESKTOP SITE ================== */
+
+	#contact-button {
+		border: 0px;
+		background: grey;
+	}
+
+
+
+
+
+#wrapper {
+
+	width: 400px;
+	margin: 100px auto 0 auto;
+}
+
+
